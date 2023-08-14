@@ -19,5 +19,71 @@
     <br>
   </discription>
   </details>
+  <details> 
+   <summary>day 2</summary>
+   <discription>
+    <h2>Code of linked list </h2>
+    <h3>How to create a linked list in C++ and how to append an element at its beginning.</h3>
+    <p>
+     
+     #include <iostream> <br>
+     using namespace std; <br>
+
+class Node { <br>
+public: <br>
+  int data;   // For integer data <br>
+  Node *next; // to point next data address <br>
+
+  Node(int data) { <br>
+    this->data = data; <br>
+    next = nullptr; <br>
+  } <br>
+}; <br>
+ <br>
+// class LinkList represent the link itself and we define methods to append and <br>
+// display the elemnts of linklist <br>
+class LinkList { <br>
+public: <br>
+  Node *head; <br>
+  LinkList() { head = nullptr; } <br>
+  // Now we define the method to add new element in linkList <br>
+  void append(int data) { <br>
+    Node *newNode = new Node(data); <br> 
+    if (head == nullptr) { <br>
+      head = newNode;<br>
+    } else {<br>
+      Node *current = head; // store head pointer value <br>
+      while ( current->next != nullptr) { // this condition works until the next pointer is Nullptr<br>
+        current = current->next;<br>
+      }<br>
+      current->next = newNode;<br>
+    }<br>
+  }<br>
+
+  void display() { <br>
+    Node *current = head; // store head pointer value <br>
+    while (current != nullptr) { //This condition works until the next pointer is Nullptr <br>
+      cout << current->data << " ";<br>
+      current = current->next;<br>
+    }<br>
+    cout << endl;<br>
+  }<br>
+  // Method to check if the linked list is empty<br>
+  bool isEmpty() { return head == nullptr;<br> }<br>
+};<br>
+
+int main() {<br>
+  LinkList myList; // create an object. it creates a link list of myList<br>
+  myList.append(5);<br>
+  myList.append(7);<br>
+  myList.append(12);<br>
+  myList.display(); <br>
+  return 0; <br>
+}
+<br>
+<br>
+    </p>
+   </discription>
+  </details>
 </details>
 
