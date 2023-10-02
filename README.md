@@ -2,6 +2,8 @@
 ## topics
 <details>
   <summary>data struture</summary>
+  <h1>What is data struture</h1>
+  <P>Data structure is a specialized format for organizing, sorting, and manipulating data. It defines the relationship between data and operation that can be performed on data.  Properly designed data structures can provide efficient methods for data retrieval, insertion, deletion, and sorting.</P>
 
   <details>
     <summary>day 1</summary>
