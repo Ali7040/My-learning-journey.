@@ -92,9 +92,10 @@
    <summary>array Fundamental Code</summary>
    <details>
     <summary>Insertion</summary>
-`     #include <iostream>
-      using namespace std;
-
+    
+`      #include <iostream>
+       using namespace std;
+ 
        int main() {
          const int MAX_SIZE = 5; // array maz size
          int arr[MAX_SIZE] = {1, 2, 3, 5};
@@ -118,6 +119,35 @@
        }
 `
    </details>
+<details>
+    <summary>Deletion</summary>
+ 
+ `         #include <iostream>
+           using namespace std;
+           
+          int main() {
+            const int MAX_SIZE = 5; // array maz size
+            int arr[MAX_SIZE] = {1, 2, 3, 4, 5};
+            int size = sizeof(arr)/sizeof(arr[0]); // current size of array
+          
+            int deleteIndex = 3;
+          
+            for(int i = deleteIndex; i < size -1; i++){
+              arr[i] = arr[i + 1];
+            }
+          
+            size--;
+            cout << "Array after Insertion: "<< endl;
+            for(int i = 0; i < size; i++){
+              cout << arr[i] << " ";
+            }
+          
+          
+            return 0;
+          }
+   </details>
+   
+   
   </details>
 </details>
 
