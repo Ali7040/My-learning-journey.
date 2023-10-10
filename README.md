@@ -146,6 +146,29 @@
             return 0;
           }
    </details>
+<details>
+  <summary>find the index of highest number</summary>
+         #include "iostream"
+        using namespace std;
+             
+     int main(){
+       int arr[]= {1,3,4,7};
+       int size = sizeof(arr)/sizeof(arr[0]);
+       int Index = 0;
+       int max_num = 0;
+     
+       for(int i =0; i < size; i++){
+         if(arr[i] > max_num){
+           max_num = arr[i];
+           Index = i;
+         }
+       }
+       cout<<"Max Number: " << max_num << endl;
+       cout << "index of max numebr: " <<Index << endl;
+       return 0;
+     }
+
+ </details>
    
    
   </details>
