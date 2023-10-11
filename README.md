@@ -169,6 +169,28 @@
      }
 
  </details>
+ <details>
+  <summary>Traverse the 2D-Array</summary>
+      int main(){
+       const int Row = 3;
+       const int Col = 3;
+      int arr[Row][Col] = {
+          {1,2,3},
+          {4,5,6},
+          {7,8,9}
+        };
+       int size = sizeof(arr)/ sizeof(arr[0][0]);
+      
+        for(int i = 0 ; i < Row; i++){
+          for(int j = 0; j < Col; j++){
+            cout << arr[i][j] <<endl;
+          }
+        }
+      
+        return 0;
+      }
+
+ </details>
    
    
   </details>
