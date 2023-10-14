@@ -1,7 +1,7 @@
  # My-learning-journey.
 ## topics
 <details>
-  <summary>data struture</summary>
+  <summary>data structure and Algo</summary>
   <h1>What is data struture</h1>
   <P>Data structure is a specialized format for organizing, sorting, and manipulating data. It defines the relationship between data and operations that can be performed on data.  Properly designed data structures can provide efficient methods for data retrieval, insertion, deletion, and sorting.</P>
 
@@ -192,6 +192,48 @@
 
  </details>
    
+  <summary>find the index of highest number</summary>
+         #include "iostream"
+        using namespace std;
+             
+     int main(){
+       int arr[]= {1,3,4,7};
+       int size = sizeof(arr)/sizeof(arr[0]);
+       int Index = 0;
+       int max_num = 0;
+     
+       for(int i =0; i < size; i++){
+         if(arr[i] > max_num){
+           max_num = arr[i];
+           Index = i;
+         }
+       }
+       cout<<"Max Number: " << max_num << endl;
+       cout << "index of max numebr: " <<Index << endl;
+       return 0;
+     }
+
+ </details>
+ <details>
+  <summary>Algo Empirical Analysis</summary>
+              #include <iostream>
+         #include <chrono>
+         using namespace std;
+         
+         int main() {
+             auto start = chrono::high_resolution_clock::now();
+         
+             // Code to be analyzed
+         
+             auto stop = chrono::high_resolution_clock::now();
+             auto duration = chrono::duration_cast<chrono::microseconds>(stop - start);
+         
+             cout << "Time taken: " << duration.count() << " microseconds" << endl;
+         
+             return 0;
+         }
+
+ </details>
    
   </details>
 </details>
