@@ -234,7 +234,82 @@
          }
 
  </details>
+ 
+   <details>
+  <summary>Stack using array</summary>
+  #include <iostream>
+using namespace std;
+
+const int MAX_SIZE = 100; // Maximum size of the stack
+
+class Stack {
+private:
+    int top; // Index of the top element in the stack
+    int arr[MAX_SIZE]; // Array to store stack elements
+
+public:
+    // Constructor to initialize the stack
+    Stack() {
+        top = -1; // Stack is initially empty
+    }
+
+    // Function to push an element onto the stack
+    void push(int value) {
+        if (top >= MAX_SIZE - 1) {
+            cout << "Stack overflow! Cannot push element " << value << endl;
+        } else {
+            arr[++top] = value;
+            cout << "Pushed " << value << " onto the stack." << endl;
+        }
+    }
+
+    // Function to pop an element from the stack
+    void pop() {
+        if (top < 0) {
+            cout << "Stack underflow! Cannot pop from an empty stack." << endl;
+        } else {
+            cout << "Popped " << arr[top--] << " from the stack." << endl;
+        }
+    }
+
+    // Function to check if the stack is empty
+    bool isEmpty() {
+        return top < 0;
+    }
+
+    // Function to peek at the top element of the stack
+    int peek() {
+        if (top < 0) {
+            cout << "Stack is empty." << endl;
+            return -1; // Return a sentinel value indicating an empty stack
+        }
+        return arr[top];
+    }
+};
+
+int main() {
+    Stack stack;
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+
+    cout << "Top element: " << stack.peek() << endl;
+
+    stack.pop();
+    cout << "Top element after pop: " << stack.peek() << endl;
+
+    stack.pop();
+    stack.pop();
+    stack.pop(); // Trying to pop from an empty stack
+
+    return 0;
+}
+
+           
+ </details> 
+ </details>
    
   </details>
+
 </details>
 
