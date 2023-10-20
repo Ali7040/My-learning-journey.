@@ -284,26 +284,26 @@ public:
             return -1; // Return a sentinel value indicating an empty stack
         }
         return arr[top];
-    }
-};
-
-int main() {
-    Stack stack;
-    stack.push(1);
-    stack.push(2);
-    stack.push(3);
-
-    cout << "Top element: " << stack.peek() << endl;
-
-    stack.pop();
-    cout << "Top element after pop: " << stack.peek() << endl;
-
-    stack.pop();
-    stack.pop();
-    stack.pop(); // Trying to pop from an empty stack
-
-    return 0;
-}
+        }
+       };
+      
+    int main() {
+       Stack stack;
+       stack.push(1);
+       stack.push(2);
+       stack.push(3);
+   
+       cout << "Top element: " << stack.peek() << endl;
+   
+       stack.pop();
+       cout << "Top element after pop: " << stack.peek() << endl;
+   
+       stack.pop();
+       stack.pop();
+       stack.pop(); // Trying to pop from an empty stack
+   
+       return 0;
+        }
 
            
  </details> 
