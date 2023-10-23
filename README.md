@@ -27,6 +27,7 @@
     <h2>Code of linked list </h2>
     <h3>How to create a linked list in C++ and how to append an element at its beginning.</h3>
     <p>
+    
      
      #include <iostream>
      using namespace std; 
@@ -93,38 +94,40 @@
    <details>
     <summary>Insertion</summary>
     
-`      #include <iostream>
-       using namespace std;
- 
-       int main() {
-         const int MAX_SIZE = 5; // array maz size
-         int arr[MAX_SIZE] = {1, 2, 3, 5};
-         int size = sizeof(arr)/sizeof(arr[0]); // current size of array
-         int newIndex = 3;
-         int newValue = 4;
-       
-         for(int i = size; i > newIndex; i--){
-           arr[i] = arr[i - 1];
-         }
-       
-         arr[newIndex] = newValue;
-         
-         cout << "Array after Insertion: "<< endl;
-         for(int i = 0; i < size; i++){
-           cout << arr[i] << " ";
-         }
-       
-       
-         return 0;
-       }
+     `      #include <iostream>
+            using namespace std;
+      
+        int main() {
+          const int MAX_SIZE = 5; // array maz size
+          int arr[MAX_SIZE] = {1, 2, 3, 5};
+          int size = sizeof(arr)/sizeof(arr[0]); // current size of array
+          int newIndex = 3;
+          int newValue = 4;
+        
+          for(int i = size; i > newIndex; i--){
+            arr[i] = arr[i - 1];
+          }
+        
+          arr[newIndex] = newValue;
+          
+          cout << "Array after Insertion: "<< endl;
+          for(int i = 0; i < size; i++){
+            cout << arr[i] << " ";
+          }
+        
+        
+          return 0;
+        }
 `
    </details>
 <details>
     <summary>Deletion</summary>
- 
- `         #include <iostream>
-           using namespace std;
-           
+
+
+    
+    `          #include <iostream>
+               using namespace std;
+             
           int main() {
             const int MAX_SIZE = 5; // array maz size
             int arr[MAX_SIZE] = {1, 2, 3, 4, 5};
@@ -148,8 +151,10 @@
    </details>
 <details>
   <summary>find the index of highest number</summary>
+
+ 
          #include "iostream"
-        using namespace std;
+         using namespace std;
              
      int main(){
        int arr[]= {1,3,4,7};
@@ -171,6 +176,7 @@
  </details>
  <details>
   <summary>Traverse the 2D-Array</summary>
+  
       int main(){
        const int Row = 3;
        const int Col = 3;
@@ -193,9 +199,10 @@
  </details>
    
   <summary>find the index of highest number</summary>
+  
          #include "iostream"
-        using namespace std;
-             
+         using namespace std;
+              
      int main(){
        int arr[]= {1,3,4,7};
        int size = sizeof(arr)/sizeof(arr[0]);
@@ -216,9 +223,12 @@
  </details>
  <details>
   <summary>Algo Empirical Analysis</summary>
-              #include <iostream>
-         #include <chrono>
-         using namespace std;
+
+  
+               #include <iostream>
+                
+               #include <chrono>
+               using namespace std;
          
          int main() {
              auto start = chrono::high_resolution_clock::now();
@@ -237,10 +247,10 @@
  
    <details>
   <summary>Stack using array</summary>
-  #include <iostream>
-using namespace std;
-
-const int MAX_SIZE = 100; // Maximum size of the stack
+     #include <iostream>
+   using namespace std;
+   
+   const int MAX_SIZE = 100; // Maximum size of the stack
 
 class Stack {
 private:
