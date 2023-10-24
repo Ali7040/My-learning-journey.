@@ -21,6 +21,25 @@
     <br>
   </discription>
   </details>
+
+
+  
+  <details>
+    <summary>Topic: 2 (What is the stack?)</summary>
+  <discription> 
+    <h1> Stack </h1>
+        <h3>Stack: </h3> 
+            a stack is a data structure that follows the Last In First Out (LIFO) principle. Think of it as a stack of plates where you can only add or remove plates from the top.
+        <h3>Basic Operations:</h3>
+            Push: Adding an item to the stack is called pushing. The item is added to the top of the stack. <br>
+            Pop: Removing an item from the stack is called popping. The top item is removed from the stack.<br>
+            Peek or Top: Viewing the top item without removing it from the stack.<br>
+            IsEmpty: Checking if the stack is empty.<br>
+            IsFull: Checking if the stack is full (in cases where stack has a fixed size).<br>
+
+  </discription>
+  </details>
+  
   <details> 
    <summary>LinkLIst Code in C++</summary>
    <discription>
