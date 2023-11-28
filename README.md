@@ -35,74 +35,132 @@
             Pop: Removing an item from the stack is called popping. The top item is removed from the stack.<br>
             Peek or Top: Viewing the top item without removing it from the stack.<br>
             IsEmpty: Checking if the stack is empty.<br>
-            IsFull: Checking if the stack is full (in cases where stack has a fixed size).<br>
+            IsFull: Checking if the stack is full (in cases where the stack has a fixed size).<br>
 
   </discription>
   </details>
   
   <details> 
-   <summary>LinkLIst Code in C++</summary>
+   <summary>LinkLIst Code in C++ with all basic Operations</summary>
    <discription>
     <h2>Code of linked list </h2>
-    <h3>How to create a linked list in C++ and how to append an element at its beginning.</h3>
+    <h3>How to create a linked list in C++ and append an element at its beginning. Insert At the end and also Insert at mid of the LinkedList and how can we traverse the linkedlist</h3>
     <p>
     
      
-     #include <iostream>
-     using namespace std; 
-
-     class Node { 
-     public: 
-       int data;   // For integer data 
-       Node *next; // to point next data address 
-   
-    Node(int data) { 
-      this->data = data; 
-      next = nullptr; 
-    } 
-    }; 
      
-    // class LinkList represents the link itself and we define methods to append and 
-    // display the elements of the link list 
-    class LinkList { 
-    public: 
-      Node *head; 
-      LinkList() { head = nullptr; } 
-      // Now we define the method to add a new element in the link list 
-      void append(int data) {
-        Node *newNode = new Node(data);
-        if (head == nullptr) { 
+     
+     class Node {
+     public:
+       int data;
+       Node *Next;
+     
+       Node(int val){
+         data = val;
+         Next = nullptr;
+       }
+     };
+     
+     class LinkedList{
+       Node *head;
+       Node *tail;
+       int size;
+     public:
+       LinkedList(){
+         head = nullptr;
+         tail = nullptr;
+         size = 0;
+       }
+      void Insert(int val){
+        Node *newNode = new Node(val);
+        if(head == nullptr){
           head = newNode;
-        } else {
-          Node *current = head; // store head pointer value 
-          while ( current->next != nullptr) { // this condition works until the next pointer is Nullptr
-            current = current->next;
-          }
-          current->next = newNode;
-        }<br>
-      }
-    
-      void display() { 
-        Node *current = head; // store head pointer value 
-        while (current != nullptr) { //This condition works until the next pointer is Nullptr 
-          cout << current->data << " ";
-          current = current->next;
+          tail = newNode;
+          size++;
         }
-        cout << endl;
-      }<br>
-      // Method to check if the linked list is empty
-      bool isEmpty() { return head == nullptr; 
+        else{
+          tail->Next = newNode;
+          tail = newNode;
+          size++;
+          tail->Next = head;
+        }
       }
-    };
-    
-    int main() {
-      LinkList myList; // create an object. it creates a link list of myList<br>
-      myList.append(5);
-      myList.append(7);
-      myList.append(12);
-      myList.display(); 
-      return 0; <br>
-    }
+     void InsertAtMiddle(int val) {
+         Node *newNode = new Node(val);
+     
+         if (size == 0) {
+             head = newNode;
+             tail = newNode;
+             newNode->Next = head;
+             size++;
+         } else {
+             Node *temp = head;
+             int mid = size / 2;
+             while (mid > 1) {
+                 temp = temp->Next;
+                 mid--;
+             }
+     
+             newNode->Next = temp->Next;
+             temp->Next = newNode;
+             size++;
+         }
+     }
+     
+     void DeleteAtFirst(){
+       if(size == 0){
+         cout << "List is empty. Cannot delete from an empty list." << endl;
+         return;
+       }
+       else if( size == 1){
+         delete head;
+         head = nullptr;
+         tail = nullptr;
+         size--;
+       }
+       else{
+         Node * temp = head;
+         head = head->Next;
+         tail->Next = head;
+         delete temp;
+         size--;
+       }
+     }
+     
+     
+     
+     
+     
+     
+     
+     void Print() {
+         Node *current = head;
+         do {
+             cout << current->data << " ";
+             current = current->Next;
+         } while (current != head);
+     
+         cout << endl;
+     }
+     
+     
+     };
+     
+     
+     int main(){
+       LinkedList myList;
+       myList.Insert(10);
+       myList.Insert(20);
+       myList.Insert(40);
+       myList.Insert(50);
+       myList.InsertAtMiddle(15);
+       myList.Print();
+       myList.Insert(100);
+       myList.Print();
+       myList.DeleteAtFirst();
+       myList.Print();
+       return 0;
+     }
 
 
     
