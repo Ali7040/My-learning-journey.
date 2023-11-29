@@ -166,6 +166,33 @@
     
    </discription>
   </details>
+
+  <details> 
+   <summary>Reverse the LinkLIst Code in C++</summary>
+   <discription>
+    <h2>Code of linked list </h2>
+    <h3>How to reverse the linkedlist in C++</h3>
+    <p>
+            
+     ListNode* reverseList(ListNode* head) {
+               if (head == nullptr || head->next == nullptr) {
+               return head;
+           }
+           
+           ListNode* restReversed = reverseList(head->next);
+           head->next->next = head;
+           head->next = nullptr;
+           
+           return restReversed;
+           }
+
+
+    
+   </discription>
+  </details>
+  
+
+  
   <details>
    <summary>array Fundamental Code</summary>
    <details>
