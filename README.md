@@ -39,6 +39,68 @@
 
   </discription>
   </details>
+
+
+<details>
+    <summary>Stack operation in C++</summary>
+  <discription> 
+    <h1> Stack Push, pop, and Peek Operation implementation</h1>
+        <h3>Basic Operations Code:</h3>
+
+        #include <iostream>
+         using namespace std;
+         #define MAX_SIZE 5
+         
+         class Stack {
+         private:
+           int arr[MAX_SIZE];
+           int top;
+         
+         public:
+           Stack() { top = -1; }
+         
+           void push(int val) {
+             if (top >= MAX_SIZE - 1) {
+               cerr << "Stack Overflow";
+               return;
+             } else {
+               arr[++top] = val;
+             }
+           }
+           void Pop() {
+             if (top < 0) {
+               cerr << "Stack Underflow" << endl;
+             } else {
+               --top;
+             }
+           }
+         
+           int peek() {
+             if (top < 0) {
+               cout << "Stack is empty!" << endl;
+               return -1;
+             }
+             return arr[top];
+           }
+         
+           bool isEmpty() { return top == -1; }
+           int Size() { return top + 1; }
+         };
+         
+         int main() {
+           Stack myStack;
+           myStack.push(5);
+           myStack.push(10);
+           myStack.push(15);
+           myStack.Pop();
+         
+           cout << "Top element: " << myStack.peek() << endl;
+         }
+
+
+  </discription>
+  </details>
+
   
   <details> 
    <summary>LinkLIst Code in C++ with all basic Operations</summary>
