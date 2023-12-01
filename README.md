@@ -45,7 +45,7 @@
     <summary>Stack operation in C++</summary>
   <discription> 
     <h1> Stack Push, pop, and Peek Operation implementation</h1>
-        <h3>Basic Operations Code:</h3>
+        <h3>Basic Operations using Array Code:</h3>
 
         #include <iostream>
          using namespace std;
@@ -100,6 +100,84 @@
 
   </discription>
   </details>
+
+
+<details>
+    <summary>Stack operation using LinkedList in C++</summary>
+  <discription> 
+    <h1> Stack Push, pop, and Peek Operation implementation</h1>
+        <h3>Basic Operations using LinkedList Code:</h3>
+   
+   ## Advantage 1: Dynamic Size
+   Implementing a stack using a linked list allows for dynamic sizing, accommodating varying stack sizes efficiently. The linked list structure enables the stack to easily grow or shrink based on the number of elements, providing flexibility in handling dynamic data structures.
+   
+   ## Advantage 2: Efficient Memory Usage
+   Utilizing a linked list for the stack ensures efficient memory usage. Memory is allocated for each element individually, eliminating the need for a fixed-size array. This approach optimizes memory resources, particularly beneficial when the stack size varies during program execution.
+
+
+        #include <iostream>
+         using namespace std;
+
+               
+       class Node {
+       public:
+       int value;
+        Node *Next;
+       
+           Node(int val) {
+             value = val;
+             Next = NULL;
+           }
+         };
+       
+         class LinkedListStack {
+         private:
+           Node *top;
+       
+         public:
+           LinkedListStack() { top = nullptr; }
+       
+           void push(int val) {
+             Node *newNode = new Node(val);
+             newNode->Next = top;
+             top = newNode;
+           }
+           void pop() {
+             if (top == nullptr) {
+               cerr<<"Stack is empty!"<<endl;
+             }
+             Node* temp = top;
+              top = top->Next;
+             delete temp;
+           }
+           int peek() {
+             if (top == nullptr) {
+               cerr<<"Stack is empty!"<<endl;
+               return -1;
+             }
+             return top->value;
+           }
+           bool isEmpty() {
+               return top == nullptr;
+           }
+         };
+       
+         int main(){
+           LinkedListStack myStack;
+       
+           myStack.push(5);
+           myStack.push(10);
+           myStack.push(15);
+           int popval;
+       
+           cout << "Top element: " << myStack.peek() << endl;
+           return 0;
+         }
+
+
+  </discription>
+  </details>
+
 
   
   <details> 
