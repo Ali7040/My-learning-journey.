@@ -40,6 +40,22 @@
   </discription>
   </details>
 
+  
+  <details>
+    <summary>Topic: 2 (What is the Queue?)</summary>
+  <discription> 
+    <h1> Queue </h1>
+        <h3>Queue: </h3> 
+               A queue is a linear data structure that follows the First In, First Out (FIFO) principle, where the element that is added first is the one to be removed first. It resembles a real-world queue or line. In a queue, elements are enqueued at the rear and dequeued from the front.
+   
+   Basic operations in a queue include:
+ 1. **Enqueue:** Adding an element to the rear of the queue.
+ 2. **Dequeue:** Removing an element from the front of the queue.
+ 3. **Front:** Retrieving the element at the front without removing it.
+ 4. **Rear (optional):** Retrieving the element at the rear without removing it (not always required in a basic queue).
+  </discription>
+  </details>
+
 
 <details>
     <summary>Stack operation in C++</summary>
